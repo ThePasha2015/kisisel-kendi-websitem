@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHADE | Kişisel Portfolyo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-content">
+      <h1 class="logo-text">SHADE</h1>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Particle Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <div id="app">
+    <nav class="navbar">
+      <div class="nav-logo">SHADE</div>
+      <div class="nav-links">
+        <a href="#home" class="active">Ana Sayfa</a>
+        <a href="#projects">Projeler</a>
+        <a href="#about">Hakkımızda</a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="profile-card glass">
+          <div class="pfp-container">
+            <img
+              src="https://cdn.discordapp.com/avatars/1090629202845372477/a_dd074058eec485653594a529b19b07a2.gif?size=1024&animated=true"
+              alt="Profile" class="pfp">
+            <div class="status-dot online"></div>
+          </div>
+          <div class="motto">
+            "herkes kendine yakışanı yapar, kalite asla tesadüf değildir."
+          </div>
+        </div>
+      </section>
+
+      <!-- Widgets Section -->
+      <section class="widgets">
+        <!-- Spotify Widget -->
+        <div class="spotify-card glass">
+          <div class="spotify-header">
+            <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="Spotify"
+              class="spotify-logo">
+            <span class="spotify-status">Şu an dinliyor</span>
+          </div>
+          <div class="spotify-content">
+            <div class="album-art-container">
+              <img src="/src/assets/album.png" alt="Album Art" id="album-art" class="pulse">
+            </div>
+            <div class="track-info">
+              <h3 id="track-name">Starboy</h3>
+              <p id="artist-name">The Weeknd</p>
+              <div class="spotify-progress">
+                <div class="spotify-bar-bg">
+                  <div class="spotify-bar-fill" style="width: 45%;"></div>
+                </div>
+                <div class="time-info">
+                  <span>1:42</span>
+                  <span>3:50</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div id="projects" class="projects-section">
+          <h2 class="section-title glow-text">Projelerimiz</h2>
+          <div class="projects-grid">
+            <div class="project-card glass">
+              <div class="project-img-placeholder">
+                <div class="glow-icon">⚡</div>
+              </div>
+              <div class="project-info">
+                <h3 class="animated-text-glow">ID Quary</h3>
+                <p>Kaliteli ID Sorgular için satın alabilirsiniz. veya discord.gg/iracim yazıp sunucaya gelerek
+                  alabilirsiniz</p>
+                <div class="project-tags">
+                  <span>Node.js</span>
+                  <span>Discord.js</span>
+                </div>
+                <a href="https://discord.gg/iracim" target="_blank" class="btn-purchase-link">
+                  <button class="btn-view">Satın Al</button>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Hakkımızda Modal/Overlay -->
+  <div id="about-overlay" class="overlay">
+    <div class="overlay-content glass">
+      <button id="close-about" class="close-btn">&times;</button>
+      <h2 class="section-title glow-text">Hakkımızda</h2>
+      <div class="about-text">
+        <p>Merhaba, ben <strong>SHADE</strong>. Dijital dünyada estetik ve performansı birleştiren projeler
+          geliştiriyorum.
+        </p>
+        <p>Vizyonum, modern teknolojileri kullanarak kullanıcı deneyimini en üst seviyeye çıkaran, göze hitap eden ve
+          işlevsel
+          dijital sanat eserleri yaratmaktır.</p>
+        <div class="about-features">
+          <div class="feat-item">
+            <span class="feat-icon">🔍</span>
+            <span>Kaliteli ID Sorgular</span>
+          </div>
+          <div class="feat-item">
+            <span class="feat-icon">💎</span>
+            <span>Premium Tasarım Anlayışı</span>
+          </div>
+          <div class="feat-item">
+            <span class="feat-icon">🛡️</span>
+            <span>Güvenilir Çözümler</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
